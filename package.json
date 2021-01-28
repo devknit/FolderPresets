@@ -1,0 +1,12 @@
+{
+  "name": "com.devknit.folderpresets",
+  "displayName": "FolderPresets",
+  "version": "1.1.0",
+  "unity": "2018.4",
+  "keywords": [
+    "unity",
+    "editor",
+    "tools",
+    "folder"
+  ]
+}
