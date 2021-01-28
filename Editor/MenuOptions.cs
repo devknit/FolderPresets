@@ -6,157 +6,7 @@ namespace FolderPresets
 {
 	public static class MenuOptions
 	{
-		[MenuItem( "Assets/Create/Folder Presets/Animations", true, 20)]
-		static bool ValidateCreateAnimations()
-		{
-			return ValidateCreate( Directories.Animations);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Animations", false, 20)]
-		static void CreateAnimations()
-		{
-			CreateDirectory( Directories.Animations);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/AnimatorControllers", true, 20)]
-		static bool ValidateCreateAnimatorControllers()
-		{
-			return ValidateCreate( Directories.AnimatorControllers);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/AnimatorControllers", false, 20)]
-		static void CreateAnimatorControllers()
-		{
-			CreateDirectory( Directories.AnimatorControllers);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/AudioClips", true, 20)]
-		static bool ValidateCreateAudioClips()
-		{
-			return ValidateCreate( Directories.AudioClips);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/AudioClips", false, 20)]
-		static void CreateAudioClips()
-		{
-			CreateDirectory( Directories.AudioClips);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Editor", true, 20)]
-		static bool ValidateCreateEditor()
-		{
-			return ValidateCreate( Directories.Editor);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Editor", false, 20)]
-		static void CreateEditor()
-		{
-			CreateDirectory( Directories.Editor);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Materials", true, 20)]
-		static bool ValidateCreateMaterials()
-		{
-			return ValidateCreate( Directories.Materials);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Materials", false, 20)]
-		static void CreateMaterials()
-		{
-			CreateDirectory( Directories.Materials);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Models", true, 20)]
-		static bool ValidateCreateModels()
-		{
-			return ValidateCreate( Directories.Models);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Models", false, 20)]
-		static void CreateModels()
-		{
-			CreateDirectory( Directories.Models);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Playables", true, 20)]
-		static bool ValidateCreatePlayables()
-		{
-			return ValidateCreate( Directories.Playables);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Playables", false, 20)]
-		static void CreatePlayables()
-		{
-			CreateDirectory( Directories.Playables);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Prefabs", true, 20)]
-		static bool ValidateCreatePrefabs()
-		{
-			return ValidateCreate( Directories.Prefabs);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Prefabs", false, 20)]
-		static void CreatePrefabs()
-		{
-			CreateDirectory( Directories.Prefabs);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Runtime", true, 20)]
-		static bool ValidateCreateRuntime()
-		{
-			return ValidateCreate( Directories.Runtime);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Runtime", false, 20)]
-		static void CreateRuntime()
-		{
-			CreateDirectory( Directories.Runtime);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Scenes", true, 20)]
-		static bool ValidateCreateScenes()
-		{
-			return ValidateCreate( Directories.Scenes);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Scenes", false, 20)]
-		static void CreateScenes()
-		{
-			CreateDirectory( Directories.Scenes);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Scripts", true, 20)]
-		static bool ValidateCreateScripts()
-		{
-			return ValidateCreate( Directories.Scripts);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Scripts", false, 20)]
-		static void CreateScripts()
-		{
-			CreateDirectory( Directories.Scripts);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Shaders", true, 20)]
-		static bool ValidateCreateShaders()
-		{
-			return ValidateCreate( Directories.Shaders);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Shaders", false, 20)]
-		static void CreateShaders()
-		{
-			CreateDirectory( Directories.Shaders);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Sprites", true, 20)]
-		static bool ValidateCreateSprites()
-		{
-			return ValidateCreate( Directories.Sprites);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Sprites", false, 20)]
-		static void CreateSprites()
-		{
-			CreateDirectory( Directories.Sprites);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Textures", true, 20)]
-		static bool ValidateCreateTextures()
-		{
-			return ValidateCreate( Directories.Textures);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Textures", false, 20)]
-		static void CreateTextures()
-		{
-			CreateDirectory( Directories.Textures);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Timelines", true, 20)]
-		static bool ValidateCreateTimelines()
-		{
-			return ValidateCreate( Directories.Timelines);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Timelines", false, 20)]
-		static void CreateTimelines()
-		{
-			CreateDirectory( Directories.Timelines);
-		}
-		[MenuItem( "Assets/Create/Folder Presets/Selections/Create", true, 9)]
+		[MenuItem( "Assets/Create/Folder Presets/Selections/Create", true, 20)]
 		static bool ValidateCreateSelections()
 		{
 			for( Directories i0 = 0; i0 < Directories.Count; ++i0)
@@ -176,8 +26,8 @@ namespace FolderPresets
 			}
 			return false;
 		}
-		[MenuItem( "Assets/Create/Folder Presets/Selections/Create", false, 9)]
-		static void CreateSelections()
+		[MenuItem( "Assets/Create/Folder Presets/Selections/Create", false, 20)]
+		internal static void CreateSelections()
 		{
 			for( Directories i0 = 0; i0 < Directories.Count; ++i0)
 			{
@@ -194,6 +44,156 @@ namespace FolderPresets
 					CreateDirectory( i0);
 				}
 			}
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Animations", true, 31)]
+		static bool ValidateCreateAnimations()
+		{
+			return ValidateCreate( Directories.Animations);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Animations", false, 31)]
+		static void CreateAnimations()
+		{
+			CreateDirectory( Directories.Animations);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/AnimatorControllers", true, 31)]
+		static bool ValidateCreateAnimatorControllers()
+		{
+			return ValidateCreate( Directories.AnimatorControllers);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/AnimatorControllers", false, 31)]
+		static void CreateAnimatorControllers()
+		{
+			CreateDirectory( Directories.AnimatorControllers);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/AudioClips", true, 31)]
+		static bool ValidateCreateAudioClips()
+		{
+			return ValidateCreate( Directories.AudioClips);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/AudioClips", false, 31)]
+		static void CreateAudioClips()
+		{
+			CreateDirectory( Directories.AudioClips);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Editor", true, 31)]
+		static bool ValidateCreateEditor()
+		{
+			return ValidateCreate( Directories.Editor);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Editor", false, 31)]
+		static void CreateEditor()
+		{
+			CreateDirectory( Directories.Editor);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Materials", true, 31)]
+		static bool ValidateCreateMaterials()
+		{
+			return ValidateCreate( Directories.Materials);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Materials", false, 31)]
+		static void CreateMaterials()
+		{
+			CreateDirectory( Directories.Materials);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Models", true, 31)]
+		static bool ValidateCreateModels()
+		{
+			return ValidateCreate( Directories.Models);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Models", false, 31)]
+		static void CreateModels()
+		{
+			CreateDirectory( Directories.Models);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Playables", true, 31)]
+		static bool ValidateCreatePlayables()
+		{
+			return ValidateCreate( Directories.Playables);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Playables", false, 31)]
+		static void CreatePlayables()
+		{
+			CreateDirectory( Directories.Playables);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Prefabs", true, 31)]
+		static bool ValidateCreatePrefabs()
+		{
+			return ValidateCreate( Directories.Prefabs);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Prefabs", false, 31)]
+		static void CreatePrefabs()
+		{
+			CreateDirectory( Directories.Prefabs);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Runtime", true, 31)]
+		static bool ValidateCreateRuntime()
+		{
+			return ValidateCreate( Directories.Runtime);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Runtime", false, 31)]
+		static void CreateRuntime()
+		{
+			CreateDirectory( Directories.Runtime);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Scenes", true, 31)]
+		static bool ValidateCreateScenes()
+		{
+			return ValidateCreate( Directories.Scenes);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Scenes", false, 31)]
+		static void CreateScenes()
+		{
+			CreateDirectory( Directories.Scenes);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Scripts", true, 31)]
+		static bool ValidateCreateScripts()
+		{
+			return ValidateCreate( Directories.Scripts);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Scripts", false, 31)]
+		static void CreateScripts()
+		{
+			CreateDirectory( Directories.Scripts);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Shaders", true, 31)]
+		static bool ValidateCreateShaders()
+		{
+			return ValidateCreate( Directories.Shaders);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Shaders", false, 31)]
+		static void CreateShaders()
+		{
+			CreateDirectory( Directories.Shaders);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Sprites", true, 31)]
+		static bool ValidateCreateSprites()
+		{
+			return ValidateCreate( Directories.Sprites);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Sprites", false, 31)]
+		static void CreateSprites()
+		{
+			CreateDirectory( Directories.Sprites);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Textures", true, 31)]
+		static bool ValidateCreateTextures()
+		{
+			return ValidateCreate( Directories.Textures);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Textures", false, 31)]
+		static void CreateTextures()
+		{
+			CreateDirectory( Directories.Textures);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Timelines", true, 31)]
+		static bool ValidateCreateTimelines()
+		{
+			return ValidateCreate( Directories.Timelines);
+		}
+		[MenuItem( "Assets/Create/Folder Presets/Timelines", false, 31)]
+		static void CreateTimelines()
+		{
+			CreateDirectory( Directories.Timelines);
 		}
 		static bool ValidateCreate( Directories directory)
 		{

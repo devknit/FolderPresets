@@ -7,7 +7,7 @@ namespace FolderPresets
 {
 	public sealed class Setting : EditorWindow
 	{
-		[MenuItem( "Assets/Create/Folder Presets/Selections/Setting", false, 9)]
+		[MenuItem( "Assets/Create/Folder Presets/Selections/Setting", false, 20)]
 		static void ShowWindow()
 		{
 			var window = GetWindow<Setting>();
@@ -26,6 +26,8 @@ namespace FolderPresets
 		}
 		void OnGUI()
 		{
+			int enabledCount = 0;
+			
 			for( Directories i0 = 0; i0 < Directories.Count; ++i0)
 			{
 				string key = $"{GetType()}#{i0}";
@@ -41,11 +43,30 @@ namespace FolderPresets
 				{
 					EditorUserSettings.SetConfigValue( key, enabled.ToString());
 				}
+				if( enabled != false)
+				{
+					++enabledCount;
+				}
 			}
+			EditorGUI.BeginDisabledGroup( enabledCount == 0);
+			{
+				if( GUILayout.Button( "Create") != false)
+				{
+					MenuOptions.CreateSelections();
+					Close();
+				}
+			}
+			EditorGUI.EndDisabledGroup();
 		}
 		Vector2 windowSize
 		{
-			get{ return new Vector2( 200, (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * (int)Directories.Count); }
+			get
+			{
+				float elementHeight = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
+				float elementCount = (int)Directories.Count + 1;
+				float totalHeight = elementHeight * elementCount + EditorGUIUtility.standardVerticalSpacing;
+				return new Vector2( 200, totalHeight);
+			}
 		}
 	}
 }
